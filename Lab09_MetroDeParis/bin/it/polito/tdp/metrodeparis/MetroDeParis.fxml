@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.metrodeparis.MetroDeParisController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.metrodeparis.MetroDeParisController">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Seleziona una stazione di partenza:">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="cmbBoxP">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label text="Seleziona una stazione d'arrivo:">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="cmbBoxA">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <top>
+      <Label text="Lab_09 - MetroDeParis" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <Button fx:id="btnPercorso" mnemonicParsing="false" onAction="#doPercorso" text="Calcola percorso" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <TextArea fx:id="txtResult" editable="false" BorderPane.alignment="CENTER" />
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
 </BorderPane>
